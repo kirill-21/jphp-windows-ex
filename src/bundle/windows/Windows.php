@@ -919,7 +919,7 @@ PS;
      * @return string
      */
     public static function getSystemDrive() : string {
-        $path = $_ENV['HOMEDRIVE'] ?? $_ENV['SystemRoot'] ?? 'C';
+        $path = $_ENV['SystemRoot'] ?? $_ENV['HOMEDRIVE'] ?? 'C';
         return str::sub($path, 0, 1);
     }    
 
